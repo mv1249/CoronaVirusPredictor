@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>COVID</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">COVID-Predictor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/symptom">Symptoms<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/prevention">Prevention<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/predict">Predict<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <main role="main" class="text-center">
+        <h1 class="cover-heading">Coronavirus Detector</h1>
+        <p class="lead">♦Please visit the Parameters page for Knowing about the parameters♦</p>
+
+    </main>
+
+
+    <div class="container">
+        <h2 class="text-center mt-3"></h2>
+
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control custom-select" name="gender" id="gender">
+                <option value = "2">Female</option>
+                <option value = "1">Male</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="intubed">Was the Patient under Intubation?</label>
+                <select class="form-control custom-select" name="intubed" id="intubed">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne">Does the Patient have Pneumonia</label>
+                <select class="form-control custom-select" name="pne" id="pne">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Enter the Age of the Person</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Enter the Age of the Person">
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="pne1">Is the Patient Pregnent?</label>
+                <select class="form-control custom-select" name="pne1" id="pne1">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne2">Does the Patient have Diabetes</label>
+                <select class="form-control custom-select" name="pne2" id="pne2">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne3">Does the Patient have Asthma</label>
+                <select class="form-control custom-select" name="pne3" id="pne3">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne4">Does the Patient have Hypertension</label>
+                <select class="form-control custom-select" name="pne4" id="pne4">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne5">Does the Patient have any Other Disease</label>
+                <select class="form-control custom-select" name="pne5" id="pne5">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne6">Does the Patient have any CardioVascular Disease</label>
+                <select class="form-control custom-select" name="pne6" id="pne6">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne7">Does the Patient Consume Tobacco</label>
+                <select class="form-control custom-select" name="pne7" id="pne7">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne8">Did The Patient Contacted any Other COVID-Patient</label>
+                <select class="form-control custom-select" name="pne8" id="pne8">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne9">Was the Patient Addmitted in ICU</label>
+                <select class="form-control custom-select" name="pne9" id="pne9">
+                <option value = "1">Yes</option>
+                <option value = "2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="pne10">What's your Opinion,whether the Patient is Postive/Negative/No idea</label>
+                <select class="form-control custom-select" name="pne10" id="pne9">
+                <option value = "1">Postive</option>
+                <option value = "2">Negative</option>
+                <option value = "3">No Idea</option>
+              </select>
+            </div>
+
+            <div class="text-center">
+                <main role="main" class="text-center">
+                    <p class="lead"><b>♦Well lets see what the Model Predicts♦</b>
+                    </p>
+                </main>
+                <button class="btn btn-primary btn-lg" type="submit">Predict</button>
+            </div>
+
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
